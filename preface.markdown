@@ -1,75 +1,84 @@
 Preface
 =======
 
-Programmers shape ideas into text.
+Les développeurs concrétisent leurs idées en texte.
 
-That text gets turned into numbers and those numbers bump into other numbers
-and *make things happen*.
+Ce texte est transformé en nombre et ces nombres en autres nombres et *font
+bouger les choses !*
 
-As programmers, we use text editors to get our ideas out of our heads and create
-the chunks of text we call "programs".  Full-time programmers will spend tens of
-thousands of hours of their lives interacting with their text editor, during
-which they'll be doing many things:
+En tant que développeurs, on utilise les éditeurs de texte pour développer nos
+idées et créer ce qu'on appelle des "programmes". Les développeurs à plein temps
+passeront des dizaines de milliers d'heures de leur vie dans leur éditeur de
+texte, durant lesquelles ils feront différentes choses:
 
-* Getting raw text from their brains into their computers.
-* Correcting mistakes in that text.
-* Restructuring the text to formulate a problem in a different way.
-* Documenting how and why something was done a particular way.
-* Communicating with other programmers about all of these things.
+* Extraire de leur cerveau du texte brut pour les sauvegarder sur leur
+  ordinateur.
+* Corriger des erreurs dans ce texte.
+* Restructurer le texte pour formuler un problème d'une manière différente.
+* Documenter comment et pourquoi cette chose est faite de cette manière.
+* Communiquer avec d'autres déveoppeurs à propos de toutes ces choses.
 
-Vim is incredibly powerful out of the box, but it doesn't truly shine until you
-take some time to customize it for your particular work, habits, and fingers.
-This book will introduce you to Vimscript, the main programming language used to
-customize Vim.  You'll be able to mold Vim into an editor suited to your own
-personal text editing needs and make the rest of your time in Vim more
-efficient.
 
-Along the way I'll also mention things that aren't strictly about Vimscript, but
-are more about learning and being more efficient in general.  Vimscript isn't
+Vim est incroyablement puissant, mais ce n'est pas totalement évident tant que
+vous n'avez pas pris du temps à l'améliorer pour votre travail, vos habitudes,
+vos droits.
+Ce livre introduira Vimscript, le principal langage de programmation utiliser
+pour améliorer et customiser Vim. Vous serez capable de modeler Vim en un
+éditeur de texte entièrement personnel, à votre gout et vous pourrez passer le
+reste de votre temps à utiliser Vim de manière plus effiace
+
+Durant tout ce livre, je mentionnerai des choses qui n'ont strictement rien à
+vous avec Vimscript mais qui vous serviront à apprendre plus sur Vim et être
+plus efficace dans votre éditeur. Vimscript isn't
 going to help you much if you wind up fiddling with your editor all day instead
 of working, so it's important to strike a balance.
 
-The style of this book is a bit different from most other books about
-programming languages.  Instead of simply presenting you with facts about how
-Vimscript works, it guides you through typing in commands to see what they do.
+Le style de ce livre est un peu différent de la plupart des autres livres sur
+les langages de programmation. A la place de simplement présenter les faits et
+comment Vimscript fonctionne, il va vous inciter à taper les commandes pour
+voir ce qu'elles font.
 
-Sometimes the book will lead you into dead ends before explaining the "right
-way" to solve a problem.  Most other books don't do this, or only mention the
-sticky issues *after* showing you the solution.  This isn't how things typically
-happen in the real world, though.  Often you'll be writing a quick piece of
+Parfois, le livre vous conduira dans des impasses avant d'expliquer la "bonne
+manière". La plupart des autres livres ne font pas ça ou mentionnent les
+problèmes *après* vous avoir montré la solution. Ce n'est pas comme ça que ça se
+passe dans la vie réelle.  Often you'll be writing a quick piece of
 Vimscript and run into a quirk of the language that you'll need to figure out.
-By stepping through this process in the book instead of glossing over it I hope
-to get you used to dealing with Vimscript's peculiarities so you're ready when
-you find edge cases of your own.  Practice makes perfect.
+En utilisant cette méthode dans le livre à la place de vous donner une simple
+explication, j'espère que vous serez capable de comprendre les particularités de
+Vimscript et que vous serez capable de résoudre vous mêmes les cas spécifiques.
+La pratique rend parfait.
 
-Each chapter of the book focuses on a single topic.  They're short but packed
-with information, so don't just skim them.  If you really want to get the most
-out of this book you need to actually type in all of the commands.  You may
-already be an experienced programmer who's used to reading code and
-understanding it straight away.  If so: it doesn't matter.  Learning Vim and
-Vimscript is a different experience from learning a normal programming language.
+Chaque chapitre de ce livre est centré sur un seul sujet. Ils sont courts mais
+contiennent beaucoup d'information, donc ne faites pas que les parcourir. Si
+vous voulez vraiment comprendre et appréhender tout le contenu de ce livre, vous
+devez tester en tapant chaque commande. Vous pouvez déjà être un développeur
+expérimenté qui a l'habitude de lire et comprendre du code. Si c'est le cas:
+cela importe peu. Apprendre Vim et Vimscript est une expérience différente
+d'apprendre un langage de programmation normal.
 
-You need to **type in *all* the commands.**
+Vous devez **tester en tapant *toutes* les commandes.**
 
-You need to **do *all* the exercises.**
+Vous devez **réaliser *tous* les exercices.**
 
-There are two reasons this is so important.  First, Vimscript is old and has
-a lot of dusty corners and twisty hallways.  One configuration option can change
-how the entire language works.  By typing *every* command in *every* lesson and
-doing *every* exercise you'll discover problems with your Vim build or
-configuration on the simpler commands, where they'll be easier to diagnose and
-fix.
+Voici deux raisons pourquoi c'est si important. Premièrement, Vimscript est
+vieux et a beaucoup de points bizarres et sensibles. Une option de configuration
+peut changer entièrement comment le langage fonctionne. En testant *tout* dans
+*toutes* les leçons et en faisant *tous* les exercices vous découvrez des
+problèmes sur des simples commandes de votre propre vim ou votre configuration
+dont les solutions seront faciles à trouver et à implémenter.
 
-Second, Vimscript *is* Vim.  To save a file in Vim, you type `:write` (or `:w`
-for short) and press return.  To save a file in a Vimscript, you use `write`.
-Many of the Vimscript commands you'll learn can be used in your day-to-day
-editing as well, but they're only helpful if they're in your muscle memory,
-which simply doesn't happen from just reading.
+Deuxièmement, Vimscript *est* Vim. Pour sauvegarder un fichier dans Vim, vous
+tapez `:write` (or `:w` en simplifié) et appuyer sur retour. Pour sauvegarder un
+fichier dans un script Vimscript, vous utilisez `write`. La plupart des
+commandes Vimscript que vous apprendrez pourront tout aussi bien être utilisées dans vos
+éditions quotidiennes, mais elles vous seront utiles seulement si vous les avez
+bien mémorisées, ce qui nécessite également de pratiquer, et non seulement lire.
 
-I hope you'll find this book useful.  It's *not* meant to be a comprehensive
-guide to Vimscript.  It's meant to get you comfortable enough with the language
-to mold Vim to your taste, write some simple plugins for other users, read other
-people's code (with regular side-trips to `:help`), and recognize some of the
-common pitfalls.
+J'espère que vous trouverez ce livre utile. Il *n'est pas* conçu pour être un
+guide complet à Vimscript et pouvoir développer rapidement de longs scripts.
+Cela signifie que vous devez être assez à l'aise avec le langage pour modeler
+Vim à votre gout, écrire des plugins pour d'autres utilisateurs, lire le code
+d'autres personnes (avec des aller-retours réguliers à `:help`), et reconnaitre
+la plupart des erreurs courantes.
 
-Good luck!
+Bonne chance !
