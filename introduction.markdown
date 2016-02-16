@@ -1,6 +1,3 @@
-[Learn Vimscript the Hard Way][book] is a book for users of the [Vim][] editor
-who want to learn how to customize Vim.
-
 [Learn Vimscript the Hard Way][book] est un livre pour les utilisateurs de
 l'éditeur de texte [Vim][] qui veulent apprendre comment améliorer et customiser
 Vim.
