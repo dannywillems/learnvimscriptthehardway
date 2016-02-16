@@ -1,18 +1,25 @@
 [Learn Vimscript the Hard Way][book] is a book for users of the [Vim][] editor
 who want to learn how to customize Vim.
 
-It is *not* a guide to *using* Vim.  Before reading this book you should be
-comfortable editing text in Vim and know what terms like "buffer", "window" and
-"insert mode" mean.
+[Learn Vimscript the Hard Way][book] est un livre pour les utilisateurs de
+l'éditeur de texte [Vim][] qui veulent apprendre comment améliorer et customiser
+Vim.
 
-The book is divided roughly into three sections:
+Ce *n'est pas* un guide pour apprendre à *utiliser* Vim. Avant de lire ce livre,
+vous devez être capable et être habitué à utiliser vim pour éditer du texte et
+savoir ce que signifie un "buffer", une "fenêtre" et le "Mode Insertion".
 
-* The first covers basic Vim commands that you can use in your `~/.vimrc` file
-  to customize Vim quickly and easily.
-* The second looks more deeply at Vimscript as a programming language, covering
-  things like variables, comparisons, and functions.
-* The third walks through the creation of a sample plugin intended for
-  distribution to other Vim users.
+Ce livre est divisé en trois sections:
+
+* Le premier couvre les commandes basiques de vim que vous pouvez utiliser dans
+  votre fichier '~/.vimrc' pour customiser Vim rapidement et facilement.
+
+* Le second décrit plus profondément VimScript en tant que langage de
+  programmation, couvrant, entre autres, les variables, les comparaisons et les
+  fonctions.
+
+* Le troisième se consacre à la création d'un plugin exemple qui peut être
+  partagé à d'autres utilisateurs de Vim.
 
 The book is [copyright][license] 2013 by Steve Losh, all rights reserved.  You
 can redistribute it as long as you don't make any changes and don't charge for
