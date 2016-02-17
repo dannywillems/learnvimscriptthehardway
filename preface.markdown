@@ -24,11 +24,11 @@ vous n'avez pas pris le temps de l'améliorer pour votre travail, vos habitudes,
 vos doigts.
 Ce livre introduira Vimscript, le principal langage de programmation utiliser
 pour améliorer et customiser Vim. Vous serez capable de modeler Vim en un
-éditeur de texte entièrement personnel, à votre gout et vous pourrez passer le
-reste de votre temps à utiliser Vim de manière plus effiace
+éditeur de texte entièrement personnel, à votre goût et vous pourrez passer le
+reste de votre temps à utiliser Vim de manière plus efficace.
 
 Durant tout ce livre, je mentionnerai des choses qui n'ont strictement rien à
-vous avec Vimscript mais qui vous serviront à apprendre plus sur Vim et être
+voir avec Vimscript mais qui vous serviront à apprendre plus sur Vim et être
 plus efficace dans votre éditeur. Vimscript isn't
 going to help you much if you wind up fiddling with your editor all day instead
 of working, so it's important to strike a balance.
@@ -49,7 +49,7 @@ Vimscript et que vous serez capable de résoudre vous mêmes les cas spécifique
 La pratique rend parfait.
 
 Chaque chapitre de ce livre est centré sur un seul sujet. Ils sont courts mais
-contiennent beaucoup d'information, donc ne faites pas que les parcourir. Si
+contiennent beaucoup d'informations, donc ne faites pas que les parcourir. Si
 vous voulez vraiment comprendre et appréhender tout le contenu de ce livre, vous
 devez tester en tapant chaque commande. Vous pouvez déjà être un développeur
 expérimenté qui a l'habitude de lire et comprendre du code. Si c'est le cas:
@@ -68,7 +68,7 @@ problèmes sur des simples commandes de votre propre vim ou votre configuration
 dont les solutions seront faciles à trouver et à implémenter.
 
 Deuxièmement, Vimscript *est* Vim. Pour sauvegarder un fichier dans Vim, vous
-tapez `:write` (or `:w` en simplifié) et appuyer sur retour. Pour sauvegarder un
+tapez `:write` (or `:w` en simplifié) et appuyez sur retour. Pour sauvegarder un
 fichier dans un script Vimscript, vous utilisez `write`. La plupart des
 commandes Vimscript que vous apprendrez pourront tout aussi bien être utilisées dans vos
 éditions quotidiennes, mais elles vous seront utiles seulement si vous les avez
@@ -77,8 +77,8 @@ bien mémorisées, ce qui nécessite également de pratiquer, et non seulement l
 J'espère que vous trouverez ce livre utile. Il *n'est pas* conçu pour être un
 guide complet à Vimscript et pouvoir développer rapidement de longs scripts.
 Cela signifie que vous devez être assez à l'aise avec le langage pour modeler
-Vim à votre gout, écrire des plugins pour d'autres utilisateurs, lire le code
-d'autres personnes (avec des aller-retours réguliers à `:help`), et reconnaitre
+Vim à votre goût, écrire des plugins pour d'autres utilisateurs, lire le code
+d'autres personnes (avec des appels réguliers à `:help`), et reconnaitre
 la plupart des erreurs courantes.
 
 Bonne chance !
