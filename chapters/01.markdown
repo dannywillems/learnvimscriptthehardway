@@ -1,66 +1,68 @@
 Echoing Messages
 ================
 
-The first pieces of Vimscript we'll look at are the `echo` and `echom` commands.
+Les premières choses que nous allons voir au sujet de Vimscript sont les
+commandes `echo` et `echom`.
 
-You can read their full documentation by running `:help echo` and `:help echom`
-in Vim.  As you go through this book you should try to read the `:help` for
-every new command you encounter to learn more about them.
+Vous pouvez lire leur documentation complète en exécutant les commandes `:help echo` et `:help echom` dans Vim.
+Tout au long de ce livre, vous devriez essayer d'exécuter une commande à chaque fois la
+commande `:help` pour en apprendre plus.
 
-Try out `echo` by running the following command:
+Essayez 'echo` en exécutant la commande suivante:
 
     :::vim
     :echo "Hello, world!"
 
-You should see `Hello, world!` appear at the bottom of the window.
+Vous devriez voir apparaître `Hello, world!` en bas de la fenêtre.
 
-Persistent Echoing
-------------------
+Echo Persistent
+---------------
 
-Now try out `echom` by running the following command.
+Maintenant essayer `echom` en tapant la commande suivante:
 
     :::vim
     :echom "Hello again, world!"
 
-You should see `Hello again, world!` appear at the bottom of the window.
+Vous devriez voir apparaître `Hello again, world!` en bas de la fenêtre.
 
-To see the difference between these two commands, run the following:
+Pour voir la différence entre ces deux commandes, exécutez les commandes
+suivantes:
 
     :::vim
     :messages
 
-You should see a list of messages.  `Hello, world!` will *not* be in this list,
-but `Hello again, world!` *will* be in it.
+Vous devriez voir une liste de message. `Hello, world!` ne devrait pas être dans
+cette liste alors que `Hello again, world!` *l'est*.
 
-When you're writing more complicated Vimscript later in this book you may find
-yourself wanting to "print some output" to help you debug problems.  Plain old
-`:echo` will print output, but it will often disappear by the time your script
-is done.  Using `:echom` will save the output and let you run `:messages` to
-view it later.
+Plus tard, quandn vous écrirez des scripts Vimscript plus compliqué dans ce
+livre, vous aimeriez pouvoir "afficher certains messages" pour vous aider à
+déboguer. `:echo` affichera la sortie mais cette dernière
+disparaîtra souvent après que votre script ait été exécuté. En utilisant
+`:echom`, vous sauvegardez la sortie et vous serez capable de les
+revoir plus tard grâce à la commande `:messages`.
 
-Comments
---------
+Commentaires
+------------
 
-Before moving on, let's look at how to add comments.  When you write Vimscript
-code (in your `~/.vimrc` file or any other one) you can add comments with the
-`"` character, like this:
+Avant de continuer, regardons comment ajouter des commentaires. Quand vous
+écrivez des scripts Vimscript, (dans votre fichier `~/.vimrc` ou dans un autre),
+vous pouvez ajouter des commentaires grâce au caractère `"`, comme ça:
 
     :::vim
-    " Make space more useful
+    " Quelques espaces utiles
     nnoremap <space> za
 
-This doesn't *always* work (that's one of those ugly corners of Vimscript), but
-in most cases it does.  Later we'll talk about when it won't (and why that
-happens).
+Ca *ne fonctionne pas tout le temps* (c'est l'un des points faibles de
+Vimscript), mais dans la plupart des cas, ça fonctionne. On apprendra plus tard
+pourquoi et quand ça ne fonctionne pas.
 
-Exercises
+Exercices
 ---------
 
-Read `:help echo`.
+Lire `:help echo`.
 
-Read `:help echom`.
+Lire `:help echom`.
 
-Read `:help messages`.
+Lire `:help messages`.
 
-Add a line to your `~/.vimrc` file that displays a friendly ASCII-art cat
-(`>^.^<`) whenever you open Vim.
+Ajouter une ligne à votre fichier `~/.vimrc` qui affiche un chat en art ASCII (`>^.^<`) quand vous ouvrez Vim.

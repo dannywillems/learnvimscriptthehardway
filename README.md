@@ -25,8 +25,8 @@ Avancement:
 
 * Introduction: 100% (Texte en anglais non traduit volontairement)
 * Préface: 90%
-* Chapitre 0: 0%
-* Chapitre 1: 0%
+* Chapitre 0: 100%
+* Chapitre 1: 100%
 * Chapitre 2: 0%
 * Chapitre 3: 0%
 * Chapitre 4: 0%

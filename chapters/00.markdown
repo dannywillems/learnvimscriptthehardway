@@ -1,43 +1,43 @@
-Prerequisites
-=============
+Prérequis
+=========
 
-To use this book you should have the latest version of Vim installed, which is
-version 7.3 at the time of this writing.  New versions of Vim are almost always
-backwards-compatible, so everything in this book should work fine with anything
-after 7.3 too.
+Pour utiliser ce livre, vous devez avoir installé la dernière version de Vim,
+c'est-à-dire la version 7.3 (au moment que ce livre est écrit). Les
+nouvelles versions sont la plupart du temps rétro-compatibles, donc
+normalement, tout devrait aussi fonctionner avec les versions ultérieures à la 7.3.
 
-Nothing in this book is specific to console Vim or GUI Vims like gVim or MacVim.
-You can use whichever you prefer.
+Rien dans ce livre est spéficique à l'interface de Vim en console ou en GUI
+comme gVim ou MacVim. Vous pouvez utiliser la version que vous préférez.
 
-You should be comfortable editing files in Vim.  You should know basic Vim
-terminology like "buffer", "window", "normal mode", "insert mode" and "text
-object".
+Vous devriez être à l'aise avec l'édition de fichiers dans Vim. Vous devriez
+connaître les termes basiques de Vim comme "buffer", "fenêtre, "Mode Normal",
+"Mode Insertion" et "objet texte" (??).
 
-If you're not at that point yet you should go through the `vimtutor` program,
-use Vim exclusively for a month or two, and come back when you've got Vim burned
-into your fingers.
+Si ce n'est pas le cas, vous devriez apprendre grâce à la commande `vimtutor`,
+utiliser uniquement Vim pendant un mois ou deux, et revenir quand vos doigts
+seront habitués à Vim. (Améliorer ?)
 
-You'll also need to have some programming experience.  If you've never
-programmed before check out [Learn Python the Hard
-Way](http://learnpythonthehardway.org/) first and come back to this book when
-you're done.
+Vous devez aussi avoir de l'expérience en programmation. Si vous n'avez jamais
+programmé avant, regardez en premier du coté de [Learn Python the Hard
+Way](http://learnpythonthehardway.org/) et revenez sur ce livre quand ce sera
+fait.
 
-Creating a Vimrc File
----------------------
+Créer un fichier Vimrc
+----------------------
 
-If you already know what a `~/.vimrc` file is and have one, go on to the next
-chapter.
+Si vous savez déjà ce qu'est un fichier `~/.vimrc` et que vous en avez déjà un,
+vous pouvez aller directement au prochain chapitre.
 
-A `~/.vimrc` file is a file you create that contains some Vimscript code.  Vim
-will automatically run the code inside this file every time you open Vim.
+Un fichier `~/.vimrc` est un fichier que vous créez et qui contient du code
+Vimscript. Vim exécutera automatiquement le code contenu dans le fichier à
+chaque fois que vous lancerez Vim.
 
-On Linux and Mac OS X this file is located in your home directory and named
+Sous Linux et Mac OS X, ce fichier se situe dans votre dossier home et s'appelle
 `.vimrc`.
 
-On Windows this file is located in your home folder and named `_vimrc`.
+Sous Windows, ce fichier se situe dans votre dossier home et s'appelle `_vimrc`.
 
-To easily find the location and name of the file on *any* operating system, run
-`:echo $MYVIMRC` in Vim.  The path will be displayed at the bottom of the
-screen.
+Pour trouver facilement l'emplacement et le nom du fichier sur *chaque* système
+d'exploitation, exécuter `:echo $MYVIMRC` dans Vim. Le chemin sera affiché en bas de l'écran.
 
-Create this file if it doesn't already exist.
+Créer ce fichier si ce n'est pas déjà fait.
