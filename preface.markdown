@@ -16,11 +16,11 @@ texte, durant lesquelles ils feront différentes choses:
 * Corriger des erreurs dans ce texte.
 * Restructurer le texte pour formuler un problème d'une manière différente.
 * Documenter comment et pourquoi cette chose est faite de cette manière.
-* Communiquer avec d'autres déveoppeurs à propos de toutes ces choses.
+* Communiquer avec d'autres développeurs à propos de toutes ces choses.
 
 
 Vim est incroyablement puissant, mais ce n'est pas totalement évident tant que
-vous n'avez pas pris du temps à l'améliorer pour votre travail, vos habitudes,
+vous n'avez pas pris le temps de l'améliorer pour votre travail, vos habitudes,
 vos droits.
 Ce livre introduira Vimscript, le principal langage de programmation utiliser
 pour améliorer et customiser Vim. Vous serez capable de modeler Vim en un
