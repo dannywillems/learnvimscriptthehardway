@@ -21,7 +21,7 @@ texte, durant lesquelles ils feront différentes choses:
 
 Vim est incroyablement puissant, mais ce n'est pas totalement évident tant que
 vous n'avez pas pris le temps de l'améliorer pour votre travail, vos habitudes,
-vos droits.
+vos doigts.
 Ce livre introduira Vimscript, le principal langage de programmation utiliser
 pour améliorer et customiser Vim. Vous serez capable de modeler Vim en un
 éditeur de texte entièrement personnel, à votre gout et vous pourrez passer le
