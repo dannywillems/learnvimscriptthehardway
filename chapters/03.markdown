@@ -1,85 +1,96 @@
-Basic Mapping
-=============
+Mapping basique
+===============
 
-If there's one feature of Vimscript that will let you bend Vim to your will more
-than any other, it's the ability to map keys.  Mapping keys lets you tell Vim:
+S'il y a une particularité que Vimscript possède et qui vous permet de
+transformer Vim comme vous le souhaitez, c'est la posibilité de réaliser des
+mappings (map keys). Les mappings vous servent par exemple à dire à Vim:
 
-> When I press this key, I want you to do this stuff instead of whatever you
-> would normally do.
 
-We're going to start off by mapping keys in normal mode.  We'll talk about how
-to map keys in insert and other modes in the next chapter.
+> Quand j'appuye sur cette touche, je veux que tu fasses ce boulot à la place
+> d'autre chose que tu fais normalement.
 
-Type a few lines of text into a file, then run:
+Nous allons commencer par réaliser des mappings en mode normal. Nous parlerons
+dans le prochain chapitre des mappings en mode insertion et dans les autres
+modes.
+
+Ecrivez quelques lignes de texte dans un fichier, puis exécutez:
 
     :::vim
     :map - x
 
-Put your cursor somewhere in the text and press `-`.  Notice how Vim deleted the
-character under the cursor, just like if you had pressed `x`.
+Placez votre curseur quelque part dans le texte et appuyez sur `-`. Remarquez
+que vim supprime le caractère sous le curseur comme si vous aviez appuyé sur
+`x`.
 
-We already have a key for "delete the character under the cursor", so let's
-change that mapping to something slightly more useful.  Run this command:
+Nous avons déjà un mapping pour "supprimer un caractère sous le curseur",
+créons-en un autre pour quelques chose d'un peu plus utile. Exécutez cette
+commande:
 
     :::vim
     :map - dd
 
-Now put your cursor on a line somewhere and press `-` again.  This time Vim
-deletes the entire line, because that's what `dd` does.
+Maintenant, placez votre curseur sur une ligne quelconque et tapez `-` à
+nouveau. Cette fois-ci, Vim supprime la ligne entière, parce que c'est ce que
+`dd` fait.
 
-Special Characters
-------------------
+Caractères spéciaux
+-------------------
 
-You can use `<keyname>` to tell Vim about special keys.  Try running this
-command:
+Vous pouvez utiliser `<nomdelatouche>` pour les touches spéciales. Essayez
+d'exécutez cette commande:
 
     :::vim
     :map <space> viw
 
-Put your cursor on a word in your text and press the space bar.  Vim will
-visually select the word.
+Placez votre curseur sur un mot dans votre texte et appuyez sur la touche
+espace. Vim va selectionner le mot en mode visuel.
 
-You can also map modifier keys like Ctrl and Alt.  Run this:
+Vous pouvez aussi modifier les mappings de touches comme Ctrl et Alt. Exécutez
+ceci:
 
     :::vim
     :map <c-d> dd
 
-Now pressing `Ctrl+d` on your keyboard will run `dd`.
+Maintenant, appuyer sur `Ctrl+d` sur votre clavier exécutera `dd`.
 
-Commenting
+Commenter
 ----------
 
-Remember in the first lesson where we talked about comments?  Mapping keys is
-one of the places where Vim comments don't work.  Try running this command:
+Vous souvenez-vous ce que nous avons dit à propos des commentaires dans la
+première leçon ? Les mappings de touches sont un des endroits où les
+commentaires ne fonctionneront pas. Tentez d'exécuter cette commande:
 
     :::vim
     :map <space> viw " Select word
 
-If you try pressing space now, something horrible will almost certainly happen.
-Why?
+Si vous essayez d'appuyer sur la barre d'espace maintenant, quelque chose
+d'horrible va certainement se passer. Pourquoi ?
 
-When you press the space bar now, Vim thinks you want it to do what
-`viw<space>"<space>Select<space>word` would do.  Obviously this isn't what we
-want.
+Quand vous appuyez sur la touche espace maintenant, Vim pense que vous voulez
+qu'il fasse ce que `viw<espace>"<espace>Select<espace>word` fait. Ce n'est pas
+bien sûr pas ce que vous voulez qu'il se passe.
 
-If you look closely at the effect of this mapping you might notice something
-strange.  Take a few minutes to try to figure out exactly what happens when you
-use it, and *why* that happens.
+Si vous faites vraiment attention à ce que ce mappign fait, vous pourrez
+remarquer quelque chose d'étrange. Prenez quelques minutes et essayez de trouver
+ce qu'il se passe réellement et *pourquoi* cela se passe de cette manière.
 
-Don't worry if you don't get it right away -- we'll talk about it more soon.
+Ne vous inquiétez pas si vous ne comprenez pas directement -- nous en parlerons
+plus tard.
 
-Exercises
+Exercices
 ---------
 
-Map the `-` key to "delete the current line, then paste it below the one we're
-on now".  This will let you move lines downward in your file with one keystroke.
+Créez un mapping de la touche `-` pour supprimer la ligne courante et la coller
+sur la ligne en dessous de laquelle vous êtes actuellement. Cela doit faire
+descendre vos lignes dans votre fichier avec une seule touche.
 
-Add that mapping command to your `~/.vimrc` file so you can use it any time
-you start Vim.
+Ajoutez ce mapping dans votre fichier `~/.vimrc` de telle manière que vous
+pouvez l'utiliser quand vous le souhaitez quand vous lancez Vim.
 
-Figure out how to map the `_` key to move the line up instead of down.
+Remarquez comment mapper la touche `_` pour faire remonter la ligne à la place
+de la faire descendre.
 
-Add that mapping to your `~/.vimrc` file too.
+Ajoutez aussi ce mapping à votre fichier `~/.vimrc`.
 
-Try to guess how you might remove a mapping and reset a key to its normal
-function.
+Essayez de trouver comment vous pouvez supprimer un mapping et le réinitialiser
+à sa fonction normale.

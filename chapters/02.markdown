@@ -1,54 +1,60 @@
-Setting Options
-===============
+Les options de configuration
+=======================
 
-Vim has many options you can set to change how it behaves.
+Vim a beaucoup d'options que vous pouvez changer pour avoir ce qu'il vous
+convient.
 
-There are two main kinds of options: boolean options (either "on" or "off") and
-options that take a value.
+Il y a principalement 2 types d'options: les options booléennes ("on" ou "off")
+et les options qui prennent une valeur.
 
-Boolean Options
----------------
+Les options booléennes
+----------------------
 
-Run the following command:
+Exécutez la commande suivante:
 
     :::vim
     :set number
 
-Line numbers should appear on the left side of the window if they weren't there
-already.  Now run this:
+Les numéros de lignes devraient apparaître sur le coté gauche de la fenêtre si
+elles ne le sont pas encore.
+Maintenant, lancez cette commande:
 
     :::vim
     :set nonumber
 
-The line numbers should disappear.  `number` is a boolean option: it can be off
-or on.  You turn it "on" by running `:set number` and "off" with `:set
-nonumber`.
+Les numéros de lignes devraient disparaître. `number` est une option booléenne:
+elle peut être activée ("on") ou désactivée ("off").
+Vous pouvez l'activer en utilisant `:set number` et la désactiver ("off") en
+utilisant `:set nonumber`.
 
-All boolean options work this way.  `:set <name>` turns the option on and `:set
-no<name>` turns it off.
+Toutes les options booléennes fonctionnent de cette manière: `:set <nom>` active
+l'option et `:set no<nom>` la désactive.
 
-Toggling Boolean Options
-------------------------
+"Inverser" les options booléennes
+-----------------------------
 
-You can also "toggle" boolean options to set them to the *opposite* of whatever
-they are now.  Run this:
-
-    :::vim
-    :set number!
-
-The line numbers should reappear.  Now run it again:
+Vous pouvez aussi "inverser" les valeurs des options booléennes de telle sorte
+que la valeur soit l'opposée de la valeur actuelle. Par exemple, exécutez:
 
     :::vim
     :set number!
 
-They should disappear once more.  Adding a `!` (exclamation point or "bang") to
-a boolean option toggles it.
+Les numéros de lignes devraient réapparaître. Maintenant, encore une fois,
+exécutez
 
-Checking Options
-----------------
+    :::vim
+    :set number!
 
-You can ask Vim what an option is currently set to by using a `?`.  Run these
-commands and watch what happens after each:
+Elles devraient disparaître encore une fois. Ajouter un point d'exclamation (ou
+"bang") `!` à une option booléenne inverse sa valeur.
+
+
+Vérifier les options
+--------------------
+
+Vous pouvez demander à Vim si une option est actuellement activée en utilisant
+`?`. Exécutez ces commandes pour voir ce qui se passe après chacune d'entre
+elles:
 
     :::vim
     :set number
@@ -56,14 +62,16 @@ commands and watch what happens after each:
     :set nonumber
     :set number?
 
-Notice how the first `:set number?` command displayed `number` while the second
-displayed `nonumber`.
+Remarquez que la première commande `:set number?` a affiché `number` alors que
+la seconde a affiché `nonumber`.
 
-Options with Values
--------------------
+Les options à valeurs
+---------------------
 
-Some options take a value instead of just being off or on.  Run the following
-commands and watch what happens after each:
+Certains options peuvent prendre des valeurs à la place de simplement pouvoir
+être activée ou désactivée (c'est-à-dire prendre les valeurs "on" ou "off").
+Exécutez les commandes suivantes et regardez ce qui se passe après chacune
+d'entres elles:
 
     :::vim
     :set number
@@ -71,43 +79,47 @@ commands and watch what happens after each:
     :set numberwidth=4
     :set numberwidth?
 
-The `numberwidth` option changes how wide the column containing line numbers
-will be.  You can change non-boolean options with `:set <name>=<value>`, and
-check them the usual way (`:set <name>?`).
+L'option `numberwidth` change la largeur de la colonne contenant le numéro de
+ligne.  Vous pouvez changer les valeurs d'une option 'non-booléenne' en
+utilisant `:set <nom>=<valeur>`, et vérifier leur valeur avec la méthode usuelle
+(`:set <nom>?`).
 
-Try checking what a few other common options are set to:
+Essayer de vérifier les valeurs des options courantes:
 
     :::vim
     :set wrap?
     :set shiftround?
     :set matchtime?
 
-Setting Multiple Options at Once
---------------------------------
+Changer la valeur de plusieurs options à la fois
+------------------------------------------------
 
-Finally, you can specify more than one option in the same `:set` command to save
-on some typing.  Try running this:
+Finalement, vous pouvez spécifier plus d'une option dans une même commande
+`:set` pour vous épargner de taper de trop. Essayer d'exécutez ces commandes:
 
     :::vim
     :set numberwidth=2
     :set nonumber
     :set number numberwidth=6
 
-Notice how both options were set and took effect in the last command.
+Remarquez que les valeurs des deux options ont été changées et le changement a
+été effectué lors de la dernière commande.
 
-Exercises
+
+Exercices
 ---------
 
-Read `:help 'number'` (notice the quotes).
+Lire `:help 'number'` (faites attention aux guillemets).
 
-Read `:help relativenumber`.
+Lire `:help relativenumber`.
 
-Read `:help numberwidth`.
+Lire `:help numberwidth`.
 
-Read `:help wrap`.
+Lire `:help wrap`.
 
-Read `:help shiftround`.
+Lire `:help shiftround`.
 
-Read `:help matchtime`.
+Lire `:help matchtime`.
 
-Add a few lines to your `~/.vimrc` file to set these options however you like.
+Ajoutez quelques lignes à votre fichier `~/.vimrc` pour changer les valeurs de
+ces options (mettez celles qui vous plaisent).
